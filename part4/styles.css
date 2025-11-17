@@ -12,21 +12,31 @@
 
 body {
     background-color: #f4f4f4;
-    color: #333;
+    color: #333333;
 }
 
 header {
-    background-color: #333;
+    background-color: #8b03f3;
     color: #fff;
     padding: 1rem;
 }
+
+
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin-left: 1rem;
+    padding-left: 85%;
 }
 
 main {
     padding: 2rem;
+}
+
+.place-card, .review-card {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
