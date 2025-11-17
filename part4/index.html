@@ -9,13 +9,15 @@
 <body>
     <header>
         <nav>
-            <img src="images/logo.png" class="logo" alt="Logo">
-            <a href="login.html" id="login-link">Login</a>
+            <a href="index.html">
+            <img src="images/logo.png" class="logo" alt="Logo"> 
+            </a>
+            <a href="login.html" id="login-button">Login</a>
         </nav>
     </header>
     <main>
         <section id="filter">
-            <h1>Available place</h1>
+            <h1>Available places</h1>
             <label for="price-filter">Max Price:</label>
             <select id="price-filter">
                 <option value="All">All</option>
@@ -27,11 +29,31 @@
         </section>
         <section id="places-list">
             <!-- List of places will be populated dynamically -->
+        <div class="place-card">
+            <h2>House name</h2>
+            <p>price per night: 40$</p>
+            <button class="details-button" onclick="location.href='place.html'">View Details</button>
+        </div>
+
+        <div class="place-card">
+            <h2>House name</h2>
+            <p>price per night: 80$</p>
+            <button class="details-button" onclick="location.href='place.html'">View Details</button>
+        </div>
+
+        <div class="place-card">
+            <h2>House name</h2>
+            <p>price per night: 100$</p>
+            <button class="details-button" onclick="location.href='place.html'">View Details</button>
+        </div>
         </section>
     </main>
     <script src="scripts.js"></script>
     <footer>
-        <p>© All rights reserved</p>
+        <div>
+            <p>© 2024 Tous droits réservés</p>
+        </div>
     </footer>
 </body>
 </html>
+
