@@ -9,13 +9,19 @@
 <body>
     <header>
         <nav>
+            <img src="images/logo.png" class="logo" alt="Logo">
             <a href="login.html" id="login-link">Login</a>
         </nav>
     </header>
     <main>
         <section id="filter">
+            <h1>Available place</h1>
             <label for="price-filter">Max Price:</label>
             <select id="price-filter">
+                <option value="All">All</option>
+                <option value="10">Up to $40</option>
+                <option value="50">Up to $80</option>
+                <option value="100">Up to $100</option>
                 <!-- Options will be populated dynamically -->
             </select>
         </section>
@@ -24,5 +30,8 @@
         </section>
     </main>
     <script src="scripts.js"></script>
+    <footer>
+        <p>© All rights reserved</p>
+    </footer>
 </body>
 </html>
