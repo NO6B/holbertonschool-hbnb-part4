@@ -9,10 +9,11 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">
-            <img src="images/logo.png" class="logo" alt="Logo"> 
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" class="logo" alt="Logo"> 
             </a>
-            <a href="login.html" id="login-button">Login</a>
+            <nav><a href="login.html" id="login-button" class="login-button">Login</a></nav>
+            <a href="login.html" id="login-button" class="login-button">Login</a>
         </nav>
     </header>
     <main>
@@ -21,31 +22,13 @@
             <label for="price-filter">Max Price:</label>
             <select id="price-filter">
                 <option value="All">All</option>
-                <option value="10">Up to $40</option>
-                <option value="50">Up to $80</option>
+                <option value="10">Up to $10</option>
+                <option value="50">Up to $50</option>
                 <option value="100">Up to $100</option>
-                <!-- Options will be populated dynamically -->
             </select>
         </section>
         <section id="places-list">
-            <!-- List of places will be populated dynamically -->
-        <div class="place-card">
-            <h2>House name</h2>
-            <p>price per night: 40$</p>
-            <button class="details-button" onclick="location.href='place.html'">View Details</button>
-        </div>
-
-        <div class="place-card">
-            <h2>House name</h2>
-            <p>price per night: 80$</p>
-            <button class="details-button" onclick="location.href='place.html'">View Details</button>
-        </div>
-
-        <div class="place-card">
-            <h2>House name</h2>
-            <p>price per night: 100$</p>
-            <button class="details-button" onclick="location.href='place.html'">View Details</button>
-        </div>
+            <!-- List of places will be populated dynamically by JavaScript -->
         </section>
     </main>
     <script src="scripts.js"></script>
@@ -56,4 +39,3 @@
     </footer>
 </body>
 </html>
-
