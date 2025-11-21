@@ -1,7 +1,3 @@
-// ============================================
-// TASK 1: LOGIN FUNCTIONALITY
-// ============================================
-
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
 
@@ -16,16 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // TASK 2: Check authentication on index page
+    //Vérifier l’authentification sur la page d’index
     if (document.getElementById('places-list')) {
         checkAuthentication();
         setupPriceFilter();
     }
 });
 
-/**
- * TASK 1: Fonction pour connecter l'utilisateur
- */
+//Fonction pour connecter l'utilisateur
 async function loginUser(email, password) {
     try {
         const response = await fetch('http://localhost:5000/api/v1/auth/login', {
@@ -48,9 +42,6 @@ async function loginUser(email, password) {
     }
 }
 
-// ============================================
-// TASK 2: INDEX PAGE FUNCTIONALITY
-// ============================================
 
 /**
  * Fonction pour récupérer un cookie par son nom
@@ -101,9 +92,7 @@ async function fetchPlaces(token) {
     }
 }
 
-/**
- * Afficher la liste des places
- */
+//Afficher la liste des places
 function displayPlaces(places) {
     const placesList = document.getElementById('places-list');
     placesList.innerHTML = ''; // Vider le contenu actuel
@@ -111,11 +100,11 @@ function displayPlaces(places) {
     places.forEach(place => {
         const placeCard = document.createElement('div');
         placeCard.className = 'place-card';
-        placeCard.setAttribute('data-price', place.price_per_night);
+        placeCard.setAttribute('data-price', place.price);
 
         placeCard.innerHTML = `
-            <h2>${place.name}</h2>
-            <p>Price per night: $${place.price_per_night}</p>
+            <h2>${place.title}</h2>  
+            <p>Price per night: $${place.price}</p>  
             <button class="details-button" onclick="location.href='place.html?place_id=${place.id}'">View Details</button>
         `;
 
@@ -123,9 +112,7 @@ function displayPlaces(places) {
     });
 }
 
-/**
- * Configurer le filtre de prix
- */
+//Configurer le filtre de prix
 function setupPriceFilter() {
     const priceFilter = document.getElementById('price-filter');
     
@@ -149,3 +136,5 @@ function setupPriceFilter() {
         });
     });
 }
+
+
