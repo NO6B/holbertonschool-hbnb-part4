@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Details</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 <body>
     <header>
@@ -12,39 +13,25 @@
             <a href="index.html">
                 <img src="images/logo.png" class="logo" alt="Logo"> 
             </a>
-            <a href="login.html" class="login-button">Login</a>
+            <a href="login.html" id="login-button" class="login-button">Login</a>
         </nav>
     </header>
     <main>
+
         <section id="description">
-            <h1>Beautiful House</h1>
         </section>
 
         <section id="place-details" class="place-details">
             <div class="place-info">
-                <p><strong>Host:</strong> John Doe</p>
-                <p><strong>Price per Night:</strong> $100</p>
-                <p><strong>Description:</strong> A beautiful house with amazing views</p>
-                <p><strong>Amenities:</strong> WiFi, Pool, Kitchen</p>
+
             </div>
         </section>
 
         <section id="reviews">
-            <h2>Reviews</h2>
-            <div class="review-card">
-                <p><strong>User:</strong> Jane Smith</p>
-                <p><strong>Rating:</strong> ⭐⭐⭐⭐</p>
-                <p><strong>Comment:</strong> Great place to stay!</p>  
-            </div>
-            <div class="review-card">
-                <p><strong>User:</strong> Robert Brown</p>
-                <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-                <p><strong>Comment:</strong> Amazing location and very comfortable.</p>
-            </div>
         </section>
 
         <section id="add-review" style="display: none;">
-            <button class="details-button" onclick="location.href='add_review.html?place_id=1'">Add a Review</button>
+            <button class="details-button" id="add-review-btn">Add a Review</button>
         </section>
     </main>
     <script src="scripts.js"></script>

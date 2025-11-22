@@ -136,6 +136,14 @@ price-filter{
     margin-top: 14px;
 }
 
+.place-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #place-details {
     display: flex;
     flex-wrap: wrap;
