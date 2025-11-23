@@ -163,7 +163,7 @@ function displayPlaceDetails(place) {
     
     // creer le titre
     const title = document.createElement('h1');
-    title.textContent = place.title || place.name;
+    title.textContent = place.title;
     title.className = 'place-title';
     placeDetailsSection.appendChild(title);
 
@@ -205,8 +205,8 @@ function displayPlaceDetails(place) {
             const reviewCard = document.createElement('div');
             reviewCard.className = 'review-card';
             reviewCard.innerHTML = `
-                <p><strong>${review.user_name || 'user'}</strong></p>
-                <p>${review.text || review.comment || ''}</p>
+                <p><strong>${review.user_name}</strong></p>
+                <p>${review.text}</p>
                 <p class="rating">note: ${review.rating}/5</p>
             `;
             reviewsContainer.appendChild(reviewCard);
@@ -292,7 +292,7 @@ async function fetchPlaceTitle(placeId) {
             const place = await response.json();
             const idSection = document.getElementById('place-identification');
             if (idSection) {
-                idSection.innerHTML = `<h1>avis pour : ${place.title || place.name}</h1>`;
+                idSection.innerHTML = `<h1>avis pour : ${place.title}</h1>`;
             }
         }
     } catch (error) {
